@@ -1,0 +1,11 @@
+langgraph
+langchain
+langchain-groq
+fastapi
+uvicorn
+python-dotenv
+playwright
+beautifulsoup4
+httpx
+rich
+pydantic

@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: jobhunteragent-api
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && playwright install chromium --with-deps"
+    startCommand: uvicorn core.api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: LINKEDIN_EMAIL
+        sync: false
+      - key: LINKEDIN_PASSWORD
+        sync: false
+      - key: NAUKRI_EMAIL
+        sync: false
+      - key: NAUKRI_PASSWORD
+        sync: false
+      - key: WELLFOUND_EMAIL
+        sync: false
+      - key: WELLFOUND_PASSWORD
+        sync: false
+      - key: CUTSHORT_EMAIL
+        sync: false
+      - key: CUTSHORT_PASSWORD
+        sync: false
+      - key: INSTAHYRE_EMAIL
+        sync: false
+      - key: INSTAHYRE_PASSWORD
+        sync: false
+      - key: PYTHONPATH
+        value: .
